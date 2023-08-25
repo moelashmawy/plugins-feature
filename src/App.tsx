@@ -1,18 +1,18 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import './app.global.scss';
-import Sidebar from './containers/SideBar/Sidebar';
-import Content from './containers/TabContent/Content';
+import { Home } from './pages/Home';
+import { Plugins } from './pages/Plugins';
 
 const App = () => {
   return (
-    <div className="app"> 
+    <div className="app">
       <BrowserRouter>
-        <Sidebar /> 
         <Routes>
-          <Route path="/plugins/:tabId" element={<Content />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/plugins/*" element={<Plugins />} />
         </Routes>
       </BrowserRouter>
-    </div>  
+    </div>
   );
 };
 
