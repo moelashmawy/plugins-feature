@@ -16,8 +16,7 @@ const Content = () => {
   const { tabId } = useParams();
   const dispatch = useDispatch();
 
-  const activeTab = useSelector((state: PluginsStateType) => state.plugins.activeTab);
-  const { tabData, plugins } = useSelector((state: PluginsStateType) => state.plugins);
+  const {activeTab, tabData, plugins } = useSelector((state: PluginsStateType) => state.plugins);
 
   const active = tabData[activeTab]?.active || [];
   const disabled = tabData[activeTab]?.disabled || [];

@@ -11,8 +11,7 @@ export const SwitchAll = () => {
   const [error, setError] = useState(null);
 
   const dispatch = useDispatch();
-  const activeTab = useSelector((state: PluginsStateType) => state.plugins.activeTab);
-  const { tabData } = useSelector((state: PluginsStateType) => state.plugins);
+  const {activeTab, tabData } = useSelector((state: PluginsStateType) => state.plugins);
 
   const active = tabData[activeTab]?.active || [];
   const disabled = tabData[activeTab]?.disabled || [];

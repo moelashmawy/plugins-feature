@@ -28,8 +28,7 @@ const Sidebar = () => {
     dispatch(setActiveTab(tabName))
   }
 
-  const activeTab = useSelector((state: PluginsStateType) => state.plugins.activeTab);
-  const { tabs, tabData } = useSelector((state: PluginsStateType) => state.plugins);
+  const {activeTab, tabs, tabData } = useSelector((state: PluginsStateType) => state.plugins);
 
   useEffect(() => {
     if(tabs?.length) return;
