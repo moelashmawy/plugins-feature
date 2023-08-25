@@ -55,7 +55,7 @@ const Sidebar = () => {
 
         { error && <div> { error } </div> }
 
-        {loading ? <Loading width={55} height={55}/>
+        {loading ? <div style={{textAlign: "center"}}><Loading width={55} height={55}/></div>
           :
           <ul>
             {tabs.map((tab: string) => (
