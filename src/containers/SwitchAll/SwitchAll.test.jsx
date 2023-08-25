@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vitest } from 'vitest';
 import { SwitchAll } from './SwitchAll';
 import { createTestStore } from '../../utils/testing';
-import { mockData } from '../../../__mocks__/mockData';
+import { mockData } from '../../__mocks__/mockData';
 
 let mockedStore;
 
