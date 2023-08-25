@@ -49,7 +49,9 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div>
-        <p className='title'>Data<b>Guard</b></p>
+        <Link to='/'>
+          <p className='title'>Data<b>Guard</b></p>
+        </Link>
 
         { error && <div> { error } </div> }
 
