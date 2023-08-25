@@ -9,15 +9,15 @@ import { mockData } from '../../__mocks__/mockData';
 
 let mockedStore;
 
-vitest.mock("react-redux", async () => {
-  const actual = await vitest.importActual("react-redux");
+vitest.mock('react-redux', async () => {
+  const actual = await vitest.importActual('react-redux');
 
   return {
     ...actual,
     useDispatch: vitest.fn(),
     useSelector: vitest.fn(),
-  }
-})
+  };
+});
 
 describe('Sidebar', () => {
   beforeEach(() => {
@@ -25,7 +25,7 @@ describe('Sidebar', () => {
     useSelector.mockReturnValue({
       activeTab: 'tab1',
       tabs: mockData.tabs,
-      tabData:mockData.tabdata
+      tabData: mockData.tabdata,
     });
 
     mockedStore = createTestStore();
@@ -52,10 +52,10 @@ describe('Sidebar', () => {
         </Provider>
       </BrowserRouter>
     );
-  
+
     const financeTab = screen.getByTestId('Finance');
     fireEvent.click(financeTab);
-  
+
     expect(window.location.pathname).toContain('Finance');
 
     const marketingTab = screen.getByTestId('Marketing');

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Switch } from '../../components/switch';
+import { Switch } from '../../components/Switch';
 import { PluginsStateType, TabDataMap } from '../../types/data';
 import { putData } from '../../service';
 import { setTabData } from '../../state/slices/pluginsSLice';
@@ -11,7 +11,9 @@ export const SwitchAll = () => {
   const [error, setError] = useState(null);
 
   const dispatch = useDispatch();
-  const {activeTab, tabData } = useSelector((state: PluginsStateType) => state.plugins);
+  const { activeTab, tabData } = useSelector(
+    (state: PluginsStateType) => state.plugins
+  );
 
   const active = tabData[activeTab]?.active || [];
   const disabled = tabData[activeTab]?.disabled || [];
@@ -31,34 +33,40 @@ export const SwitchAll = () => {
         ...tab,
         ...(!allPluginsDisabled && { disabled: mergedDisabled }),
         ...(allPluginsDisabled && {
-          disabled: tab.disabled.filter(plug => !tab.active.includes(plug) && !tab.inactive.includes(plug))
-        })
+          disabled: tab.disabled.filter(
+            (plug) => !tab.active.includes(plug) && !tab.inactive.includes(plug)
+          ),
+        }),
       };
     }
 
     putData('plugins', body)
-    .then(data => {
+      .then((data) => {
         dispatch(setTabData(data));
         setLoading(false);
         setError(null);
-    })
-    .catch(error => {
-      setError(error.message);
-      setLoading(false);
-    });
+      })
+      .catch((error) => {
+        setError(error.message);
+        setLoading(false);
+      });
   };
 
   return (
-      <div className='switch-all'>
-        {error && <div className='error'>{error}</div>}
-        {loading &&  <Loading width={33} height={33}/> }
-        {!loading && !error && <div>{allPluginsDisabled ? 'All plugins disabled' : 'All plugins enabled'}</div>}
-        <Switch
-          isChecked={!allPluginsDisabled}
-          onChange={handleSwitchAll}
-          disabled={loading}
-          testId='Switch All Plugins'
-        />
-      </div>
+    <div className="switch-all">
+      {error && <div className="error">{error}</div>}
+      {loading && <Loading width={33} height={33} />}
+      {!loading && !error && (
+        <div>
+          {allPluginsDisabled ? 'All plugins disabled' : 'All plugins enabled'}
+        </div>
+      )}
+      <Switch
+        isChecked={!allPluginsDisabled}
+        onChange={handleSwitchAll}
+        disabled={loading}
+        testId="Switch All Plugins"
+      />
+    </div>
   );
-}
+};

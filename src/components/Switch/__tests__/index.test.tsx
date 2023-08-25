@@ -1,4 +1,4 @@
-import { it } from 'vitest'
+import { it } from 'vitest';
 import { Switch } from '..';
 import { createSnapshot } from '../../../utils/testing';
 

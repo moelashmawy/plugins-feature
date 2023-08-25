@@ -8,36 +8,36 @@ import { mockData } from '../../__mocks__/mockData';
 
 let mockedStore;
 
-vitest.mock("react-redux", async () => {
-  const actual = await vitest.importActual("react-redux");
+vitest.mock('react-redux', async () => {
+  const actual = await vitest.importActual('react-redux');
 
   return {
     ...actual,
     useDispatch: vitest.fn(),
     useSelector: vitest.fn(),
-  }
-})
+  };
+});
 
 describe('SwitchAll', () => {
-    beforeEach(() => {
-        useDispatch.mockReturnValue(vitest.fn());
-        useSelector.mockReturnValue({
-            activeTab: 'tab1',
-            tabs: mockData.tabs,
-            tabData: mockData.tabdata,
-            plugins: mockData.plugins
-        });
-
-        mockedStore = createTestStore();
+  beforeEach(() => {
+    useDispatch.mockReturnValue(vitest.fn());
+    useSelector.mockReturnValue({
+      activeTab: 'tab1',
+      tabs: mockData.tabs,
+      tabData: mockData.tabdata,
+      plugins: mockData.plugins,
     });
+
+    mockedStore = createTestStore();
+  });
 
   it('renders the switch and handles switching', () => {
     render(
-        <BrowserRouter>
-            <Provider store={mockedStore}>
-                <SwitchAll />
-            </Provider>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Provider store={mockedStore}>
+          <SwitchAll />
+        </Provider>
+      </BrowserRouter>
     );
 
     const switchAllButton = screen.getByTestId('Switch All Plugins');

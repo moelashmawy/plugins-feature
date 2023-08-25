@@ -3,7 +3,7 @@
 exports[`should render plugin card correctly 1`] = `
 <DocumentFragment>
   <div
-    class="card"
+    class="card-component"
   >
     <div
       class="header"
@@ -33,9 +33,13 @@ exports[`should render plugin card correctly 1`] = `
         Allowed
       </span>
     </div>
-    <p>
-      Awesome plugin
-    </p>
+    <div
+      class="desc"
+    >
+      <p>
+        Awesome plugin
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;

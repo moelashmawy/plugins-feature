@@ -10,7 +10,7 @@ const fetchData = async (path: string) => {
     console.error('Error fetching data:', error);
     throw error;
   }
-}
+};
 
 const putData = async (path: string, data: unknown) => {
   try {
@@ -20,6 +20,6 @@ const putData = async (path: string, data: unknown) => {
     console.error('Error posting data:', error);
     throw error;
   }
-}
+};
 
-export { fetchData, putData}
+export { fetchData, putData };

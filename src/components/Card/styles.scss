@@ -1,0 +1,46 @@
+.card-component {
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  padding: 18px;
+  height: 120px;
+  min-height: 170px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+      font-weight: 500;
+    }
+  }
+
+  .card-status {
+    color: $color-allowed;
+    margin-top: -10px;
+    display: flex;
+    justify-content: end;
+
+    &.inactive {
+      color: $color-blocked;
+    }
+
+    .loading {
+      margin-right: 5px;
+    }
+  }
+
+  .desc {
+    display: flex;
+    margin-top: -10px;
+
+    p {
+      flex: 0 0 85%;
+    }
+  }
+}
+
+.disabled-card {
+  opacity: 50%;
+  cursor: not-allowed;
+}

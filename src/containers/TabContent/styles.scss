@@ -1,19 +1,23 @@
 .content {
-    padding: 0 40px;
-  
-    .title {
-      margin: 40px 0;
-      font-size: 25px;
-    }
-  
-    .plugins {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 35px;
-    }
+  padding: 0 50px;
 
-    .error {
-      margin-bottom: 10px;
-      color: $color-blocked;
-    }
+  .title {
+    margin: 40px 0;
+    font-size: 25px;
   }
+
+  .plugins {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  .card {
+    width: calc(33.33% - 35px);
+  }
+
+  .error {
+    margin-bottom: 10px;
+    color: $color-blocked;
+  }
+}

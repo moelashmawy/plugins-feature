@@ -7,24 +7,25 @@ export const pluginsSlice = createSlice({
     tabs: [],
     tabData: {},
     plugins: {},
-    activeTab: ''
+    activeTab: '',
   } as ReduxStateType,
   reducers: {
     setTabs: (state, action) => {
-      state.tabs = action.payload
+      state.tabs = action.payload;
     },
     setTabData: (state, action) => {
-      state.tabData = action.payload
+      state.tabData = action.payload;
     },
     setPlugins: (state, action) => {
-      state.plugins = action.payload
+      state.plugins = action.payload;
     },
     setActiveTab: (state, action) => {
-      state.activeTab = action.payload
-    }
-  }
-})
+      state.activeTab = action.payload;
+    },
+  },
+});
 
-export const { setTabs, setTabData, setPlugins, setActiveTab } = pluginsSlice.actions
+export const { setTabs, setTabData, setPlugins, setActiveTab } =
+  pluginsSlice.actions;
 
-export default pluginsSlice.reducer
+export default pluginsSlice.reducer;
