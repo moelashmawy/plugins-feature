@@ -1,0 +1,14 @@
+@import './styles/variables.scss';
+@import './components/switch/styles.scss';
+@import './components/Loading/styles.scss';
+@import './components/card/styles.scss';
+@import './containers/TabContent/styles.scss';
+@import './containers/SideBar/styles.scss';
+@import './containers/SwitchAll/styles.scss';
+
+.app {
+  display: flex;
+}
+
+
+

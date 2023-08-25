@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render with default width and height 1`] = `
+<DocumentFragment>
+  <span
+    class="loader"
+    style="width: 15px; height: 15px;"
+  />
+</DocumentFragment>
+`;
+
+exports[`should render with width and height 25 1`] = `
+<DocumentFragment>
+  <span
+    class="loader"
+    style="width: 25px; height: 25px;"
+  />
+</DocumentFragment>
+`;

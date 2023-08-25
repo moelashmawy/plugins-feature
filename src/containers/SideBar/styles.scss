@@ -1,0 +1,38 @@
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 350px;
+  background-color: #f0f0f0;
+
+  .title {
+    text-align: center;
+    font-size: xx-large
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    a {
+      color: #333;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+
+      &.active {
+        background-color: white;
+        border-left: 4px solid red;
+      }
+    }
+  }
+
+  .tab {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render plugin card correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="header"
+    >
+      <h3>
+        plugin 1
+      </h3>
+      <label
+        class="switch"
+      >
+        <input
+          checked=""
+          type="checkbox"
+        />
+        <span
+          class="slider round"
+        />
+      </label>
+    </div>
+    <div
+      class="card-status"
+    >
+      <span
+        class="loading"
+      />
+      <span>
+        Allowed
+      </span>
+    </div>
+    <p>
+      Awesome plugin
+    </p>
+  </div>
+</DocumentFragment>
+`;

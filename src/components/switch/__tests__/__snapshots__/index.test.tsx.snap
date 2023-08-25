@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render checked switch 1`] = `
+<DocumentFragment>
+  <label
+    class="switch"
+  >
+    <input
+      checked=""
+      type="checkbox"
+    />
+    <span
+      class="slider round"
+    />
+  </label>
+</DocumentFragment>
+`;
+
+exports[`should render unchecked switch 1`] = `
+<DocumentFragment>
+  <label
+    class="switch"
+  >
+    <input
+      type="checkbox"
+    />
+    <span
+      class="slider round"
+    />
+  </label>
+</DocumentFragment>
+`;
